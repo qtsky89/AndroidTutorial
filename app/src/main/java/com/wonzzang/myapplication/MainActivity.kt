@@ -19,9 +19,6 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        val textView1 = findViewById<TextView>(R.id.text1)
-
-        println(textView1)
         /*
         val name = TextView(this).apply {
             typeface = Typeface.DEFAULT_BOLD
