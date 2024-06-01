@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setContentView(R.layout.activity_main)
+        /*
         val name = TextView(this).apply {
             typeface = Typeface.DEFAULT_BOLD
             text = "Lake Louise"
@@ -44,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         setContentView(layout)
-
+        */
 
         /*
         enableEdgeToEdge()
