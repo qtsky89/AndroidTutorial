@@ -4,21 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BUTTON1"
-        android:backgroundTint="#0000ff"
-        android:padding="30dp"
-        />
+<ImageView
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:maxWidth="10000dp"
+    android:maxHeight="10000dp"
+    android:adjustViewBounds="true"
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:backgroundTint="#ff0000"
-        android:paddingBottom="50dp"
-        android:text="BUTTON2" />
+    android:src="@drawable/ic_launcher_foreground"
+    android:background="#0000ff"
+    />
 
 </LinearLayout>
 
