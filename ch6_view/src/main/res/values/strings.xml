@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Ch6_View</string>
+    <string name="main_desc">
+        For your precious personal information, please check your current password.
+    </string>>
+    <string name="password_txt">Don\'t you remember your password?</string>>
 </resources>
