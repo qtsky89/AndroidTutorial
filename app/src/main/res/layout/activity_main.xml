@@ -2,18 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
-<ImageView
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:maxWidth="10000dp"
-    android:maxHeight="10000dp"
-    android:adjustViewBounds="true"
+    <Button
+        android:id="@+id/visibleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="visible"
+        />
 
-    android:src="@drawable/ic_launcher_foreground"
-    android:background="#0000ff"
-    />
+    <TextView
+        android:id="@+id/targetView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello world"
+        android:background="#FF0000"
+        android:textColor="#FFFFFF"
+        />
+
+    <Button
+        android:id="@+id/invisibleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="invisible"
+        />
 
 </LinearLayout>
 
