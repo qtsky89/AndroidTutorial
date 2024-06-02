@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "wonzzang"
 include(":app")
- 
+include(":ch6_view")
