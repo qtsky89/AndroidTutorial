@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:rowCount="3"
     >
-
-    <ImageView
-        android:id="@+id/testImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        />
-    <Button
-        android:layout_toRightOf="@id/testImage"
-        android:layout_alignBottom="@id/testImage"
-        android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hello"
-        />
-</RelativeLayout>
+    <Button android:text="A" />
+    <Button android:text="B" />
+    <Button android:text="C" />
+    <Button android:text="D" />
+    <Button android:text="E" />
+    <Button android:text="F" />
+</GridLayout>
