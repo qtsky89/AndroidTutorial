@@ -9,8 +9,10 @@
     <Button android:text="HELLOWORLD HELLOWORLD" />
     <Button android:text="C" />
     <Button android:text="D" />
-    <Button android:text="E"
-        android:layout_gravity="fill_horizontal"
+    <Button android:text="E" />
+    <Button android:text="F"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:layout_gravity="right"
         />
-    <Button android:text="F" />
 </GridLayout>
