@@ -2,12 +2,15 @@
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:rowCount="3"
+    android:orientation="horizontal"
+    android:columnCount="3"
     >
     <Button android:text="A" />
     <Button android:text="B" />
-    <Button android:text="C" />
+    <Button android:text="C"
+        android:layout_row="1"
+        android:layout_column="2"
+        />
     <Button android:text="D" />
     <Button android:text="E" />
     <Button android:text="F" />
