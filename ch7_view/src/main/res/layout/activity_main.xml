@@ -6,12 +6,11 @@
     android:columnCount="3"
     >
     <Button android:text="A" />
-    <Button android:text="B" />
-    <Button android:text="C"
-        android:layout_row="1"
-        android:layout_column="2"
-        />
+    <Button android:text="HELLOWORLD HELLOWORLD" />
+    <Button android:text="C" />
     <Button android:text="D" />
-    <Button android:text="E" />
+    <Button android:text="E"
+        android:layout_gravity="fill_horizontal"
+        />
     <Button android:text="F" />
 </GridLayout>
