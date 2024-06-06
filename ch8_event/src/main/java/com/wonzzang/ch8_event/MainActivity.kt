@@ -2,6 +2,8 @@ package com.wonzzang.ch8_event
 
 import android.os.Bundle
 import android.os.SystemClock
+import android.view.KeyEvent
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -41,5 +43,16 @@ class MainActivity : AppCompatActivity() {
             binding.resetButton.isEnabled = false
             binding.startButton.isEnabled = true
         })
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode === KeyEvent.KEYCODE_BACK) {
+            if (System.currentTimeMillis() - initTime > 3000) {
+                Toast.makeText(this, "one more!", Toast.LENGTH_SHORT).show()
+                initTime = System.currentTimeMillis()
+                return true
+            }
+        }
+        return super.onKeyDown(keyCode, event)
     }
 }
