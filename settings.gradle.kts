@@ -23,4 +23,3 @@ rootProject.name = "wonzzang"
 include(":app")
 include(":ch6_view")
 include(":ch7_view")
-include(":ch8_view")
