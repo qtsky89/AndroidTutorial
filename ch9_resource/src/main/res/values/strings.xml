@@ -7,5 +7,5 @@
     </string>
     <string name="intro_more">Learn More</string>
     <string name="intro_button">Turn On</string>
-    <string name="intro_deplay">Not Now</string>
+    <string name="intro_delay">Not Now</string>
 </resources>
