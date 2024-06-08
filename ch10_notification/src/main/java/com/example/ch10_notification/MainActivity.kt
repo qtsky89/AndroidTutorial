@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val permissionLauncher = registerForActivityResult(
             ActivityResultContracts.RequestMultiplePermissions(), {
                 if (it.all { permission -> permission.value == true }) {
-                    notify()
+                    notif()
                 } else {
                     Toast.makeText(this, "permission denied...", Toast.LENGTH_SHORT).show()
                 }
@@ -43,16 +43,16 @@ class MainActivity : AppCompatActivity() {
                         "android.permission.POST_NOTIFICATIONS"
                     ) == PackageManager.PERMISSION_GRANTED
                 ) {
-                    notify()
+                    notif()
                 } else {
                     permissionLauncher.launch(arrayOf("android.permission.POST_NOTIFICATIONS"))
                 }
             } else {
-                notify()
+                notif()
             }
         })
     }
-    fun notify() {
+    private fun notif() {
         val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         val builder: NotificationCompat.Builder
