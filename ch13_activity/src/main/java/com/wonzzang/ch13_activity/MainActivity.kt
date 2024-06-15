@@ -1,6 +1,9 @@
-package com.example.ch13_activity
+package com.wonzzang.ch13_activity
 
+import android.content.Intent
 import android.os.Bundle
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,8 +20,24 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //add................................
-        
+        val requestLauncher: ActivityResultLauncher<Intent> = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            it.data!!.getStringExtra("result")?.let {
+                datas?.add(it)
+                adapter.notifyDataSetChanged()
+            }
+        }
+
+        binding.mainFab.setOnClickListener{
+            val intent = Intent(this, AddActivity::class.java)
+            requestLauncher.launch(intent)
+        }
+
+        datas = savedInstanceState?.let {
+            it.getStringArrayList("datas")?.toMutableList()
+        } ?: let {
+            mutableListOf<String>()
+        }
+
 
         val layoutManager = LinearLayoutManager(this)
         binding.mainRecyclerView.layoutManager=layoutManager
@@ -29,6 +48,8 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    //add...............................
-    
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putStringArrayList("datas", ArrayList(datas))
+    }
 }

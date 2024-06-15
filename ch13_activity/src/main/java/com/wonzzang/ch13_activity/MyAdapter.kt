@@ -1,14 +1,9 @@
-package com.example.ch13_activity
+package com.wonzzang.ch13_activity
 
-import android.content.Context
-import android.graphics.Color
-import android.graphics.Rect
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ch13_activity.databinding.ItemRecyclerviewBinding
+import com.wonzzang.ch13_activity.databinding.ItemRecyclerviewBinding
 
 class MyViewHolder(val binding: ItemRecyclerviewBinding): RecyclerView.ViewHolder(binding.root)
 

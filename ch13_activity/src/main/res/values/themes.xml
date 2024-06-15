@@ -6,4 +6,7 @@
     </style>
 
     <style name="Theme.Wonzzang" parent="Base.Theme.Wonzzang" />
+    <style name="ToolbarIconColor" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">#FFFFFF</item>
+    </style>
 </resources>

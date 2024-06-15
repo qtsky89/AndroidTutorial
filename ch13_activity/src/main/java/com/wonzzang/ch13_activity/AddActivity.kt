@@ -1,9 +1,10 @@
-package com.example.ch13_activity
+package com.wonzzang.ch13_activity
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.wonzzang.ch13_activity.R
 import com.wonzzang.ch13_activity.databinding.ActivityAddBinding
 
 class AddActivity : AppCompatActivity() {
@@ -21,6 +22,14 @@ class AddActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-
-    
+    override fun onOptionsItemSelected(item: MenuItem): Boolean  = when (item.itemId) {
+        R.id.menu_add_save -> {
+            val intent = intent
+            intent.putExtra("result", binding.addEditView.text.toString())
+            setResult(Activity.RESULT_OK, intent)
+            finish()
+            true
+        }
+        else -> true
+    }
 }
